@@ -456,6 +456,29 @@ img { max-width: 100%; display: block; }
 .award-card p { color: var(--ink-soft); font-size: 0.95rem; }
 .award-lav  { border-bottom: 6px solid var(--lav); }
 .award-pink { border-bottom: 6px solid var(--pink); }
+.award-cert {
+  position: relative; display: block; overflow: hidden;
+  border-radius: var(--radius-sm); border: 3px solid #fff;
+  background: #fff; box-shadow: var(--shadow);
+}
+.award-cert img {
+  display: block; width: 100%; aspect-ratio: 4 / 3;
+  object-fit: cover; object-position: top center;
+  transition: transform 0.5s ease;
+}
+.award-cert:hover img, .award-cert:focus-visible img { transform: scale(1.07); }
+.cert-zoom {
+  position: absolute; left: 50%; bottom: 10px; translate: -50% 10px; opacity: 0;
+  background: var(--ink); color: #fff; pointer-events: none; white-space: nowrap;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.78rem;
+  padding: 6px 14px; border-radius: 999px;
+  transition: opacity 0.3s ease, translate 0.3s ease;
+}
+.award-cert:hover .cert-zoom, .award-cert:focus-visible .cert-zoom { opacity: 1; translate: -50% 0; }
+.award-meta {
+  font-family: var(--font-head); font-weight: 700; font-size: 0.8rem;
+  color: var(--ink-soft); letter-spacing: 0.02em; margin: 0 0 8px;
+}
 
 /* ---------- references ---------- */
 .ref-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 820px; margin: 30px auto 0; }
