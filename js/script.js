@@ -78,6 +78,22 @@
 
   /* ---------- reveal on scroll ---------- */
   var revealEls = document.querySelectorAll(".reveal");
+
+  function attachTilt(card) {
+    if (reduceMotion) return;
+    card.addEventListener("mousemove", function (e) {
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform =
+        "rotateY(" + (px * 8).toFixed(2) + "deg) rotateX(" + (-py * 8).toFixed(2) + "deg)";
+    });
+    card.addEventListener("mouseleave", function () {
+      card.style.transform = "";
+    });
+    setTimeout(function () { card.classList.add("tilt-ready"); }, 1000);
+  }
+
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealEls.forEach(function (el) { el.classList.add("in-view"); });
   } else {
@@ -86,6 +102,7 @@
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("in-view");
+            if (entry.target.classList.contains("tilt")) attachTilt(entry.target);
             revealObserver.unobserve(entry.target);
           }
         });
@@ -94,6 +111,32 @@
     );
     revealEls.forEach(function (el) { revealObserver.observe(el); });
   }
+
+  /* ---------- scroll-linked effects: progress, parallax, timeline draw ---------- */
+  var progressBar = document.getElementById("progressBar");
+  var parallaxEls = Array.prototype.slice.call(document.querySelectorAll("[data-parallax]"));
+  var timeline = document.querySelector(".timeline");
+
+  function updateScrollEffects() {
+    var y = window.scrollY;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.transform = "scaleX(" + (max > 0 ? y / max : 0).toFixed(4) + ")";
+
+    if (!reduceMotion) {
+      parallaxEls.forEach(function (el) {
+        el.style.translate = "0 " + (y * parseFloat(el.dataset.parallax)).toFixed(1) + "px";
+      });
+    }
+
+    if (timeline) {
+      var r = timeline.getBoundingClientRect();
+      var p = (window.innerHeight * 0.85 - r.top) / r.height;
+      timeline.style.setProperty("--draw", Math.max(0, Math.min(1, p)).toFixed(3));
+    }
+  }
+  window.addEventListener("scroll", updateScrollEffects, { passive: true });
+  window.addEventListener("resize", updateScrollEffects);
+  updateScrollEffects();
 
   /* ---------- animated stat counters ---------- */
   function animateCount(el) {

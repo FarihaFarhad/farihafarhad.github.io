@@ -13,23 +13,25 @@
 </head>
 <body>
 
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
   <!-- floating pastel decorations -->
   <div class="bg-decor" aria-hidden="true">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <span class="blob blob-3"></span>
-    <span class="sparkle s-1">✦</span>
-    <span class="sparkle s-2">✧</span>
-    <span class="sparkle s-3">✦</span>
-    <span class="sparkle s-4">❀</span>
-    <span class="sparkle s-5">✧</span>
+    <span class="blob blob-1" data-parallax="0.06"></span>
+    <span class="blob blob-2" data-parallax="-0.05"></span>
+    <span class="blob blob-3" data-parallax="0.09"></span>
+    <span class="sparkle s-1" data-parallax="0.16">✦</span>
+    <span class="sparkle s-2" data-parallax="-0.12">✧</span>
+    <span class="sparkle s-3" data-parallax="0.2">✦</span>
+    <span class="sparkle s-4" data-parallax="-0.16">❀</span>
+    <span class="sparkle s-5" data-parallax="0.12">✧</span>
   </div>
 
   <header class="nav" id="top">
     <nav class="nav-inner container">
       <a class="logo" href="#top" aria-label="Fariha Farhad home">
         <span class="logo-mark">FF</span>
-        <span class="logo-text">fariha<span class="logo-dot">.</span>farhad</span>
+        <span class="logo-text">Fariha<span class="logo-dot">.</span>Farhad</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
@@ -49,7 +51,7 @@
   <main>
     <!-- ============ HERO ============ -->
     <section class="hero container">
-      <div class="hero-copy reveal">
+      <div class="hero-copy reveal reveal-left">
         <span class="hero-badge">🌸 Ciao, I'm</span>
         <h1>Fariha <span class="grad-text">Farhad</span></h1>
         <p class="hero-type">
@@ -70,69 +72,124 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14 0 1.54-.02 2.79-.02 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
           </a>
           <a href="https://www.researchgate.net/profile/Fariha-Farhad" target="_blank" rel="noopener" aria-label="ResearchGate" class="rg-badge">RG</a>
+          <a href="https://scholar.google.com/citations?user=1TepsCsAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" class="rg-badge scholar-badge">GS</a>
           <a href="mailto:farihafarhad24@gmail.com" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg>
           </a>
         </div>
       </div>
 
-      <div class="hero-art reveal">
-        <div class="avatar-frame">
-          <img src="assets/avatar.png" alt="Pastel illustration of Fariha, a student sitting with her laptop surrounded by stars and clouds" />
-          <span class="avatar-chip chip-1">🎓 CSE @ AIUB</span>
-          <span class="avatar-chip chip-2">📚 9 Publications</span>
-          <span class="avatar-chip chip-3">🏆 Dean's List</span>
+      <div class="hero-art reveal reveal-pop">
+        <div class="mascot-stage">
+          <span class="speech-bubble">Hello World!</span>
+          <div class="orbit" aria-hidden="true">
+            <span class="orbit-chip oc-1">&lt;/&gt;</span>
+            <span class="orbit-chip oc-2">🎓</span>
+            <span class="orbit-chip oc-3">🔬</span>
+            <span class="orbit-chip oc-4">☕</span>
+          </div>
+
+          <svg class="robot" viewBox="0 0 220 240" role="img" aria-label="Cute pastel robot mascot wearing a graduation cap">
+            <ellipse cx="110" cy="228" rx="62" ry="10" fill="#F0E6FA" />
+            <!-- graduation cap -->
+            <polygon points="110,8 172,32 110,56 48,32" fill="#B793D6" />
+            <line x1="172" y1="32" x2="178" y2="58" stroke="#FFCBA4" stroke-width="3" stroke-linecap="round" />
+            <circle cx="178" cy="62" r="5" fill="#FFCBA4" />
+            <!-- head -->
+            <rect x="50" y="40" width="120" height="84" rx="26" fill="#C9A7E0" />
+            <rect x="62" y="52" width="96" height="60" rx="18" fill="#FFF9F2" />
+            <g class="eyes">
+              <circle cx="92" cy="78" r="7" fill="#4A3B52" />
+              <circle cx="128" cy="78" r="7" fill="#4A3B52" />
+            </g>
+            <circle cx="78" cy="92" r="6" fill="#F5B8C8" opacity="0.85" />
+            <circle cx="142" cy="92" r="6" fill="#F5B8C8" opacity="0.85" />
+            <path d="M100 92 Q110 100 120 92" stroke="#4A3B52" stroke-width="3" fill="none" stroke-linecap="round" />
+            <!-- body -->
+            <rect x="70" y="128" width="80" height="62" rx="20" fill="#F5B8C8" />
+            <text x="110" y="166" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" font-family="Consolas, monospace">&lt;/&gt;</text>
+            <!-- arms -->
+            <rect x="50" y="136" width="16" height="40" rx="8" fill="#E8A9BC" />
+            <g class="arm-wave">
+              <rect x="154" y="116" width="16" height="46" rx="8" fill="#E8A9BC" />
+            </g>
+            <!-- legs -->
+            <rect x="84" y="190" width="18" height="22" rx="8" fill="#A8E0C8" />
+            <rect x="118" y="190" width="18" height="22" rx="8" fill="#A8E0C8" />
+          </svg>
+
+          <span class="bit b-1" aria-hidden="true">0</span>
+          <span class="bit b-2" aria-hidden="true">1</span>
+          <span class="bit b-3" aria-hidden="true">1</span>
+          <span class="bit b-4" aria-hidden="true">0</span>
         </div>
+        <span class="avatar-chip chip-1">🎓 CSE @ AIUB</span>
+        <span class="avatar-chip chip-2">📚 9 Publications</span>
+        <span class="avatar-chip chip-3">🏆 Dean's List</span>
       </div>
     </section>
 
+    <span class="scroll-hint" aria-hidden="true">scroll for more ↓</span>
+
     <!-- stats strip -->
-    <section class="stats container reveal" aria-label="Quick stats">
-      <div class="stat stat-lav"><span class="stat-num" data-count="9">0</span><span class="stat-label">Publications</span></div>
-      <div class="stat stat-mint"><span class="stat-num" data-count="4">0</span><span class="stat-label">Projects Built</span></div>
-      <div class="stat stat-sky"><span class="stat-num" data-count="2">0</span><span class="stat-label">Awards Won</span></div>
+    <section class="stats container" aria-label="Quick stats">
+      <div class="stat stat-lav reveal reveal-pop" style="--i:0"><span class="stat-num" data-count="9">0</span><span class="stat-label">Publications</span></div>
+      <div class="stat stat-mint reveal reveal-pop" style="--i:1"><span class="stat-num" data-count="4">0</span><span class="stat-label">Projects Built</span></div>
+      <div class="stat stat-sky reveal reveal-pop" style="--i:2"><span class="stat-num" data-count="2">0</span><span class="stat-label">Awards Won</span></div>
     </section>
+
+    <!-- scrolling ribbon 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-group">research ✿ code ✿ teach ✿ coffee ✿ curiosity ✿ publish ✿ repeat ✿&nbsp;</span>
+        <span class="marquee-group">research ✿ code ✿ teach ✿ coffee ✿ curiosity ✿ publish ✿ repeat ✿&nbsp;</span>
+      </div>
+    </div>-->
 
     <!-- ============ ABOUT ============ -->
     <section class="section container" id="about">
-      <h2 class="section-title"><span class="title-flower">❀</span> About Me</h2>
+      <h2 class="section-title reveal reveal-title"><span class="title-flower">❀</span> About Me</h2>
       <div class="about-grid">
-        <div class="about-card reveal">
+        <div class="about-card reveal reveal-left">
           <p>
-            I'm an enthusiastic and driven Computer Science &amp; Engineering student with a strong passion for
-            <strong>research</strong> and <strong>knowledge sharing</strong>. I love exploring complex problems,
-            contributing to impactful academic work, and one day standing at the front of a classroom helping others fall
-            in love with learning too.
+            I’m an enthusiastic and driven Computer Science &amp; Engineering student with a strong interest in
+            research, problem-solving, and knowledge sharing. I enjoy exploring challenging computational problems,
+            understanding how intelligent systems work, and turning theoretical ideas into solutions that can be
+            useful in the real world. In the future, I hope to contribute to meaningful research while also sharing
+            what I learn and helping others discover the joy of learning.
           </p>
           <p>
-            My research wanders across the places where technology meets everyday life — how AI shapes our homes and
-            trust, how social media reshapes families and teenagers, and how smart, sustainable ideas can lift up farmers
-            and small businesses in Bangladesh.
+            My research interests span Artificial Intelligence, Natural Language Processing, Machine Learning, Deep
+            Learning, and Graph Theory &amp; Algorithms, with a particular focus on their real-world applications. I’m
+            especially interested in exploring how these techniques can be used effectively and conveniently to
+            address practical problems and improve everyday experiences. For me, the most exciting part of research is
+            not only developing intelligent methods, but understanding how we can make them useful, accessible, and
+            impactful in real life.
           </p>
-          <p class="about-quote">“Curiosity First, Code Second, Coffee Always.” ☕</p>
+          <p class="about-quote">“I came. I saw. I Googled.” 🔍</p>
         </div>
-        <ul class="fact-list reveal">
-          <li><span class="fact-key">🎓 studying</span><span class="fact-val">BSc in CSE, AIUB</span></li>
-          <li><span class="fact-key">📍 based in</span><span class="fact-val">Dhaka, Bangladesh</span></li>
-          <li><span class="fact-key">🔬 focus</span><span class="fact-val">AI &amp; society, sustainable tech</span></li>
-          <li><span class="fact-key">💭 dream</span><span class="fact-val">teaching &amp; academia</span></li>
-          <li><span class="fact-key">✉️ email</span><span class="fact-val">farihafarhad24@gmail.com</span></li>
+        <ul class="fact-list">
+          <li class="reveal reveal-right" style="--i:0"><span class="fact-key">🎓 studying</span><span class="fact-val">BSc in CSE, AIUB</span></li>
+          <li class="reveal reveal-right" style="--i:1"><span class="fact-key">📍 based in</span><span class="fact-val">Dhaka, Bangladesh</span></li>
+          <li class="reveal reveal-right" style="--i:2"><span class="fact-key">🔬 focus</span><span class="fact-val">AI · NLP · ML · Deep Learning · Graph Theory</span></li>
+          <li class="reveal reveal-right" style="--i:3"><span class="fact-key">💭 dream</span><span class="fact-val">teaching &amp; academia</span></li>
+          <li class="reveal reveal-right" style="--i:4"><span class="fact-key">✉️ email</span><span class="fact-val">farihafarhad24@gmail.com</span></li>
         </ul>
       </div>
     </section>
 
     <!-- ============ SKILLS ============ -->
     <section class="section container" id="skills">
-      <h2 class="section-title"><span class="title-flower">✿</span> My Toolkit</h2>
+      <h2 class="section-title reveal reveal-title"><span class="title-flower">✿</span> My Toolkit</h2>
       <div class="skill-grid">
-        <div class="skill-card reveal skill-lav">
+        <div class="skill-card reveal reveal-pop skill-lav" style="--i:0">
           <span class="skill-emoji">🎨</span>
           <h3>frontend</h3>
           <div class="pill-wrap">
             <span class="pill">HTML</span><span class="pill">CSS</span>
           </div>
         </div>
-        <div class="skill-card reveal skill-pink">
+        <div class="skill-card reveal reveal-pop skill-pink" style="--i:1">
           <span class="skill-emoji">⚙️</span>
           <h3>backend &amp; languages</h3>
           <div class="pill-wrap">
@@ -141,14 +198,14 @@
             <span class="pill">Python</span>
           </div>
         </div>
-        <div class="skill-card reveal skill-mint">
+        <div class="skill-card reveal reveal-pop skill-mint" style="--i:2">
           <span class="skill-emoji">🗄️</span>
           <h3>databases</h3>
           <div class="pill-wrap">
             <span class="pill">Oracle SQL</span>
           </div>
         </div>
-        <div class="skill-card reveal skill-sky">
+        <div class="skill-card reveal reveal-pop skill-sky" style="--i:3">
           <span class="skill-emoji">🧠</span>
           <h3>beyond code</h3>
           <div class="pill-wrap">
@@ -161,30 +218,30 @@
 
     <!-- ============ PROJECTS ============ -->
     <section class="section container" id="projects">
-      <h2 class="section-title"><span class="title-flower">✦</span> Things i've built</h2>
+      <h2 class="section-title reveal reveal-title"><span class="title-flower">✦</span> Things i've built</h2>
       <div class="project-grid">
-        <article class="project-card reveal proj-lav">
+        <article class="project-card reveal reveal-pop tilt proj-lav" style="--i:0">
           <div class="project-head"><span class="project-emoji">📝</span><span class="project-year">web app</span></div>
           <h3>Notes App</h3>
           <p>A clean little browser-based note-taking app for jotting, saving and revisiting study notes without leaving the page.</p>
           <div class="pill-wrap"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div>
         </article>
 
-        <article class="project-card reveal proj-pink">
+        <article class="project-card reveal reveal-pop tilt proj-pink" style="--i:1">
           <div class="project-head"><span class="project-emoji">🕰️</span><span class="project-year">graphics</span></div>
           <h3>Time Travel Adventure</h3>
           <p>An interactive OpenGL adventure that hops through eras — built to explore real-time 2D/3D rendering and game loops in C++.</p>
           <div class="pill-wrap"><span class="pill">C++</span><span class="pill">OpenGL</span></div>
         </article>
 
-        <article class="project-card reveal proj-mint">
+        <article class="project-card reveal reveal-pop tilt proj-mint" style="--i:2">
           <div class="project-head"><span class="project-emoji">🤖</span><span class="project-year">web app</span></div>
           <h3>AI Chat-Bot</h3>
           <p>A friendly conversational chat-bot for the web, answering questions with a soft personality — and the spark for my chatbot-adoption research paper.</p>
           <div class="pill-wrap"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div>
         </article>
 
-        <article class="project-card reveal proj-sky">
+        <article class="project-card reveal reveal-pop tilt proj-sky" style="--i:3">
           <div class="project-head"><span class="project-emoji">🛒</span><span class="project-year">academic</span></div>
           <h3>Shop Management System</h3>
           <p>A desktop application for tracking inventory, sales and customers — a tidy, database-backed way to run a small shop.</p>
@@ -195,10 +252,10 @@
 
     <!-- ============ PUBLICATIONS ============ -->
     <section class="section container" id="publications">
-      <h2 class="section-title"><span class="title-flower">📚</span> Publications</h2>
+      <h2 class="section-title reveal reveal-title"><span class="title-flower">📚</span> Publications</h2>
       <p class="section-sub">nine papers across AI, society, sustainability and education — filter by theme below.</p>
 
-      <div class="filter-bar reveal" role="group" aria-label="Filter publications by theme">
+      <div class="filter-bar reveal reveal-pop" role="group" aria-label="Filter publications by theme">
         <button class="filter-btn is-active" data-filter="all">all ✨</button>
         <button class="filter-btn" data-filter="ai">AI &amp; ML</button>
         <button class="filter-btn" data-filter="society">Society &amp; Media</button>
@@ -207,16 +264,17 @@
       </div>
 
       <ol class="pub-list">
-        <li class="pub-card reveal" data-theme="society">
+        <li class="pub-card reveal reveal-left" data-theme="society">
           <span class="pub-num">01</span>
           <div class="pub-body">
             <h3>The Misuse of Social Media by Teenagers Involved in Gang Activities in Bangladesh</h3>
             <p class="pub-venue">4th National Research Project Contest-2025 · Bangladesh University of Professionals</p>
             <div class="pill-wrap"><span class="pill tag-society">society &amp; media</span><span class="pill pub-year">2025</span></div>
+            <a class="pub-link" href="https://www.researchgate.net/publication/395359891_Title_The_misuse_of_Social_Media_by_Teenagers_involved_in_Gang_Activities_in_Bangladesh" target="_blank" rel="noopener">read the paper ↗</a>
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="ai">
+        <li class="pub-card reveal reveal-right" data-theme="ai">
           <span class="pub-num">02</span>
           <div class="pub-body">
             <h3>Smarter Living or Greater Risk: An Evaluation of the Advantages and Limitations of AI in Domestic Appliances</h3>
@@ -225,16 +283,17 @@
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="ai sustain">
+        <li class="pub-card reveal reveal-left" data-theme="ai sustain">
           <span class="pub-num">03</span>
           <div class="pub-body">
             <h3>Machine Learning Analysis of Chatbot Adoption: Efficiency, Accessibility, and Environmental Benefits in Tourism</h3>
             <p class="pub-venue">International Conference on Business Innovation and Sustainable Development (ICBISD 2026) · Varendra University</p>
             <div class="pill-wrap"><span class="pill tag-ai">AI &amp; ML</span><span class="pill tag-sustain">sustainability</span><span class="pill pub-year">2026</span></div>
+            <a class="pub-link" href="https://www.researchgate.net/profile/Sumit-Paul-17/publication/400397062_Machine_Learning_Analysis_of_Chatbot_Adoption_Efficiency_Accessibility_and_Environmental_Benefits_in_Tourism/links/6982327312f837212a1747ba/Machine-Learning-Analysis-of-Chatbot-Adoption-Efficiency-Accessibility-and-Environmental-Benefits-in-Tourism.pdf" target="_blank" rel="noopener">read the paper ↗ (PDF)</a>
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="edu">
+        <li class="pub-card reveal reveal-right" data-theme="edu">
           <span class="pub-num">04</span>
           <div class="pub-body">
             <h3>The Impact of Internet Resources on Student Learning and Academic Performance</h3>
@@ -243,43 +302,47 @@
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="society">
+        <li class="pub-card reveal reveal-left" data-theme="society">
           <span class="pub-num">05</span>
           <div class="pub-body">
             <h3>The Impact of Digitalization and Social Media on Traditional Family Structures and Intergenerational Communication in Urban Bangladesh</h3>
             <p class="pub-venue">11th International Research Conference on Governance in Society, Business and Environment · BARD, Comilla</p>
             <div class="pill-wrap"><span class="pill tag-society">society &amp; media</span></div>
+            <a class="pub-link" href="https://www.researchgate.net/publication/400399956_The_Impact_of_Digitalization_and_Social_Media_on_Traditional_Family_Structures_and_Intergenerational_Communication_in_Urban_Bangladesh" target="_blank" rel="noopener">read the paper ↗</a>
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="sustain">
+        <li class="pub-card reveal reveal-right" data-theme="sustain">
           <span class="pub-num">06</span>
           <div class="pub-body">
             <h3>Rethinking Safety: Smart Strategies for Disaster Risk Reduction</h3>
             <p class="pub-venue">1st International Conference on Geosciences for Achieving Sustainable Development Goals (ICGSDG) · University of Rajshahi</p>
             <div class="pill-wrap"><span class="pill tag-sustain">sustainability</span></div>
+            <a class="pub-link" href="https://www.researchgate.net/publication/398529506_Title_Rethinking_Safety_Smart_Strategies_for_Disaster_Risk_Reduction" target="_blank" rel="noopener">read the paper ↗</a>
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="ai sustain">
+        <li class="pub-card reveal reveal-left" data-theme="ai sustain">
           <span class="pub-num">07</span>
           <div class="pub-body">
             <h3>AI-Based Sustainable Agribusiness Models: Bridging Farmers and Global Markets</h3>
             <p class="pub-venue">7th International Conference on Integrated Sciences (ICIS 2025) · Eastern University</p>
             <div class="pill-wrap"><span class="pill tag-ai">AI &amp; ML</span><span class="pill tag-sustain">sustainability</span><span class="pill pub-year">2025</span></div>
+            <a class="pub-link" href="https://www.researchgate.net/publication/397015952_Title_AI-Based_Sustainable_Agribusiness_Models_Bridging_Farmers_and_Global_Markets" target="_blank" rel="noopener">read the paper ↗</a>
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="sustain">
+        <li class="pub-card reveal reveal-right" data-theme="sustain">
           <span class="pub-num">08</span>
           <div class="pub-body">
             <h3>Microgreens as a Sustainable and Profitable Solution for Nutritious Food and Low-Investment Farming</h3>
             <p class="pub-venue">The Future of Business: Innovation, Technology and Sustainability · University of Chittagong</p>
             <div class="pill-wrap"><span class="pill tag-sustain">sustainability</span></div>
+            <a class="pub-link" href="https://www.researchgate.net/publication/404659677_Titel_Microgreens_as_a_Sustainable_and_Profiable_Solutions_for_Nutritious_Food_and_Low-Investment_Farming" target="_blank" rel="noopener">read the paper ↗</a>
           </div>
         </li>
 
-        <li class="pub-card reveal" data-theme="ai society">
+        <li class="pub-card reveal reveal-left" data-theme="ai society">
           <span class="pub-num">09</span>
           <div class="pub-body">
             <h3>The Influence of AI-Generated Content on Public Perception and Trust</h3>
@@ -293,33 +356,33 @@
 
     <!-- ============ EDUCATION ============ -->
     <section class="section container" id="education">
-      <h2 class="section-title"><span class="title-flower">🎓</span> Education</h2>
+      <h2 class="section-title reveal reveal-title"><span class="title-flower">🎓</span> Education</h2>
       <div class="timeline">
-        <div class="timeline-item reveal tl-lav">
+        <div class="timeline-item reveal reveal-right tl-lav" style="--i:0">
           <span class="tl-dot"></span>
           <div class="tl-card">
             <span class="tl-year">2023-</span>
             <h3>BSc in Computer Science &amp; Engineering</h3>
             <p class="tl-place">American International University–Bangladesh</p>
-            <span class="gpa-badge">CGPA 3.81</span>
+           
           </div>
         </div>
-        <div class="timeline-item reveal tl-pink">
+        <div class="timeline-item reveal reveal-right tl-pink" style="--i:1">
           <span class="tl-dot"></span>
           <div class="tl-card">
             <span class="tl-year">2022</span>
             <h3>Higher Secondary Certificate</h3>
             <p class="tl-place">Milestone College</p>
-            <span class="gpa-badge">GPA 5.00</span>
+            
           </div>
         </div>
-        <div class="timeline-item reveal tl-mint">
+        <div class="timeline-item reveal reveal-right tl-mint" style="--i:2">
           <span class="tl-dot"></span>
           <div class="tl-card">
             <span class="tl-year">2020</span>
             <h3>Secondary School Certificate</h3>
             <p class="tl-place">KC Model College</p>
-            <span class="gpa-badge">GPA 5.00</span>
+            
           </div>
         </div>
       </div>
@@ -327,14 +390,14 @@
 
     <!-- ============ AWARDS ============ -->
     <section class="section container" id="awards">
-      <h2 class="section-title"><span class="title-flower">🏆</span> Awards &amp; Honours</h2>
+      <h2 class="section-title reveal reveal-title"><span class="title-flower">🏆</span> Awards &amp; Honours</h2>
       <div class="award-grid">
-        <div class="award-card reveal award-lav">
+        <div class="award-card reveal reveal-pop tilt award-lav" style="--i:0">
           <span class="award-emoji">🌟</span>
           <h3>Dean's List Award</h3>
           <p>Recognised for outstanding academic standing at AIUB.</p>
         </div>
-        <div class="award-card reveal award-pink">
+        <div class="award-card reveal reveal-pop tilt award-pink" style="--i:1">
           <span class="award-emoji">🥇</span>
           <h3>Best Paper Award</h3>
           <p>Honoured for research excellence among competing conference submissions.</p>
@@ -346,10 +409,10 @@
 
     <!-- ============ CONTACT ============ -->
     <section class="section container" id="contact">
-      <h2 class="section-title"><span class="title-flower">♡</span> Let's talk</h2>
+      <h2 class="section-title reveal reveal-title"><span class="title-flower">♡</span> Let's talk</h2>
       <p class="section-sub">research collab, a question, or just want to swap study playlists? my inbox is always open.</p>
       <div class="contact-grid">
-        <div class="contact-cards reveal">
+        <div class="contact-cards reveal reveal-left">
           <a class="contact-card cc-lav" href="mailto:farihafarhad24@gmail.com">
             <span class="cc-emoji">✉️</span>
             <span class="cc-label">email</span>
@@ -370,9 +433,14 @@
             <span class="cc-label">researchgate</span>
             <span class="cc-value">profile/Fariha-Farhad</span>
           </a>
+          <a class="contact-card cc-scholar" href="https://scholar.google.com/citations?user=1TepsCsAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+            <span class="cc-emoji">🎓</span>
+            <span class="cc-label">google scholar</span>
+            <span class="cc-value">scholar.google.com/citations?user=1TepsCsAAAAJ</span>
+          </a>
         </div>
 
-        <form class="contact-form reveal" id="contactForm" novalidate>
+        <form class="contact-form reveal reveal-right" id="contactForm" novalidate>
           <label class="field">
             <span>your name</span>
             <input type="text" id="cfName" name="name" placeholder="e.g. a fellow researcher" required />
