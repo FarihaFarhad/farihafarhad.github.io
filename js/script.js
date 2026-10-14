@@ -254,7 +254,7 @@
   function openLightbox(btn) {
     lightboxLastFocus = btn;
     lightboxImg.src = btn.dataset.cert;
-    lightboxImg.alt = btn.dataset.title + " — certificate";
+    lightboxImg.alt = btn.dataset.alt || btn.dataset.title;
     lightboxCaption.textContent = btn.dataset.title;
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
